@@ -9,6 +9,7 @@
       </el-aside>
       <el-main class="main">
         <el-scrollbar>
+          <Breadcrumb />
           <router-view />
         </el-scrollbar>
       </el-main>
@@ -19,6 +20,7 @@
 <script setup>
 import BaseHeader from "./BaseHeader"
 import SideBar from "./SideBar"
+import Breadcrumb from "./Breadcrumb"
 </script>
 
 <style scoped lang="scss">
@@ -33,6 +35,9 @@ import SideBar from "./SideBar"
     height: 64px;
     background-color: #1b2640;
     box-shadow: 0 1px 4px rgba(0, 21, 41, 0.3);
+  }
+  .main {
+    padding: 4px 16px;
   }
 }
 </style>

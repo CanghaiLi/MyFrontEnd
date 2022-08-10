@@ -1,14 +1,13 @@
 import { createApp } from "vue"
 import { createPinia } from "pinia"
 import ElementPlus from "element-plus"
-import "element-plus/dist/index.css"
 import App from "./App"
 import router from "./router"
-import "./styles/index.scss"
-import * as ElementPlusIconsVue from "@element-plus/icons-vue"
+import * as ElementPlusIcons from "@element-plus/icons-vue"
+import "@/styles/index.scss"
 
 const app = createApp(App)
-for (const [key, component] of Object.entries(ElementPlusIconsVue)) {
+for (const [key, component] of Object.entries(ElementPlusIcons)) {
   app.component(key, component)
 }
 app.use(createPinia())

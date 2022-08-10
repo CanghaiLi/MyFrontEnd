@@ -1,0 +1,7 @@
+// css全局变量
+.el-table {
+  --el-table-header-bg-color: var(--el-color-primary-light-7) !important;
+  .el-table__header thead {
+    color: #333;
+  }
+}

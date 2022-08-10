@@ -21,8 +21,6 @@ import MenuItem from "./MenuItem.vue"
 import menus from "@/router/routes"
 import { useRoute } from "vue-router"
 const route = useRoute()
-console.log(route)
-
 const activePath = computed(() => {
   return route.path
 })

@@ -1,4 +1,5 @@
-@use "./element.scss" as *;
+// @use "./element/theme.scss" as *;
+@use "./element/element.scss" as *;
 
 * {
   margin: 0;
@@ -17,7 +18,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-a {
+a{
   text-decoration: none;
 }
 

@@ -8,11 +8,11 @@
 defineProps({
   pad_lr: {
     type: String,
-    default: "18px",
+    default: "16px",
   },
   pad_tb: {
     type: String,
-    default: "18px",
+    default: "16px",
   },
 })
 </script>
@@ -20,9 +20,7 @@ defineProps({
 <style lang="scss" scoped>
 .card {
   box-sizing: border-box;
-  min-width: 800px;
-  margin-bottom: 18px;
-  border-radius: 6px;
+  border-radius: 4px;
   background: #fff;
 }
 </style>
