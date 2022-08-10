@@ -1,13 +1,41 @@
 import { createRouter, createWebHistory } from "vue-router"
-import routes from "./routers"
-// import { generateRouter } from "../utils/index";
-import Routers from "./generator-routers"
+import Layout from "@/layout"
+import ParentView from "@/components/ParentView"
 // import { useLocalStorage } from "../hooks/useLocalStorage";
 // import { useUserStore } from '../store/userStore'
-
+import menuRouters from "./routes"
 const router = createRouter({
   history: createWebHistory(),
-  routes,
+  routes: [
+    {
+      path: "/",
+      redirect: "/admin/home",
+    },
+    {
+      path: "/:pathMatch(.*)*",
+      name: "404",
+      component: () => import(/* chunkName: 404 */ "@/components/NotFound"),
+    },
+    // {
+    //   path: "/login",
+    //   name: "Login",
+    //   component: () => import(/* chunkName: login */ "src/view/login/login.vue"),
+    // },
+    {
+      path: "/",
+      name: "Layout",
+      component: Layout,
+      children: [
+        {
+          path: "/admin",
+          name: "Admin",
+          redirect: "/admin/home",
+          component: ParentView,
+          children: menuRouters,
+        },
+      ],
+    },
+  ],
 })
 
 // const { getLocalStorage } = useLocalStorage();

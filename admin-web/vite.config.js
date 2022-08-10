@@ -10,10 +10,14 @@ export default defineConfig({
     alias: {
       "@": fileURLToPath(new URL("./src", import.meta.url)),
     },
-    // 忽略后缀名的配置选项, 添加 .vue 选项时要记得原本默认忽略的选项也要手动写入
+    // 忽略后缀名的配置选项, 官方不建议省略.vue... -_-#
     extensions: [".mjs", ".js", ".json", ".vue"],
   },
   server: {
+    host: "127.0.0.1",
+    port: 8080,
+    cors: true,
+    open: true,
     hmr: true,
   },
 })

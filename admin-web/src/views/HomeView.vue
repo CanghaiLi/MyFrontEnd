@@ -1,25 +1,16 @@
-<script setup>
-import { ref } from "vue"
-import { ElMessage } from "element-plus"
-defineProps({ msg: String })
-const count = ref(0)
-const toast = () => ElMessage.success("Hello")
-</script>
-
 <template>
-  <h1>{{ msg }}</h1>
-
-  <!-- example components -->
-  <el-button @click="toast">El Message</el-button>
-  <el-button type="primary" @click="count++">count is: {{ count }}</el-button>
-  <el-button type="success" @click="count++">count is: {{ count }}</el-button>
-  <el-button type="warning" @click="count++">count is: {{ count }}</el-button>
-  <el-button type="danger" @click="count++">count is: {{ count }}</el-button>
-  <el-button type="info" @click="count++">count is: {{ count }}</el-button>
+  <div class="welcome">
+    <img src="@/assets/welcome.png" alt="" />
+  </div>
 </template>
 
-<style lang="scss">
-.ep-button {
-  margin: 4px;
+<style scoped lang="scss">
+.welcome {
+  padding-top: 40px;
+  text-align: center;
+  img {
+    width: 562px;
+    height: 446px;
+  }
 }
 </style>

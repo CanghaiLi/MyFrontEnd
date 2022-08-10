@@ -1,4 +1,4 @@
-@use "element.scss" as *;
+@use "./element.scss" as *;
 
 * {
   margin: 0;
@@ -17,10 +17,8 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-a, .green {
+a {
   text-decoration: none;
-  color: hsla(160, 100%, 37%, 1);
-  transition: 0.4s;
 }
 
 @media (hover: hover) {
