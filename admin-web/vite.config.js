@@ -31,10 +31,15 @@ export default defineConfig({
     },
   },
   server: {
-    host: "127.0.0.1",
-    port: 8080,
-    cors: true,
+    host: "0.0.0.0",
+    port: 3000,
     open: true,
     hmr: true,
+    proxy: {
+      "/api/pc": {
+        target: "http://localhost:8080",
+        changeOrigin: true,
+      },
+    },
   },
 })

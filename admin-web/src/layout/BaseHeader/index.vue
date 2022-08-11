@@ -4,7 +4,7 @@ const userName = "Admin"
 
 <template>
   <div class="toolbar">
-    <div class="logo">
+    <div class="logo" @click="$router.replace('/')">
       <img src="@/assets/logoleo.png" />
       <span>XX数字管理系统</span>
     </div>
@@ -34,17 +34,19 @@ const userName = "Admin"
   height: 100%;
   right: 20px;
   text-align: right;
+  cursor: pointer;
   .logo {
     display: flex;
     align-items: center;
     img {
-      width: 40px;
+      width: 36px;
       margin-right: 10px;
     }
     span {
       color: #fff;
       font-weight: 600;
-      font-size: 20px;
+      font-size: 18px;
+      user-select: none;
     }
   }
   .drop {

@@ -1,7 +1,28 @@
 <template>
   <router-view v-slot="{ Component }">
-    <keep-alive>
+    <transition name="fade" mode="out-in">
+      <!-- <keep-alive> -->
       <component :is="Component" />
-    </keep-alive>
+      <!-- </keep-alive> -->
+    </transition>
   </router-view>
 </template>
+
+<style>
+/* 渐变设置 */
+.fade-enter-from,
+.fade-leave-to {
+  transform: translateX(20px);
+  opacity: 0;
+}
+.fade-enter-to,
+.fade-leave-from {
+  opacity: 1;
+}
+.fade-enter-active {
+  transition: all 0.7s ease;
+}
+.fade-leave-active {
+  transition: all 0.3s cubic-bezier(1, 0.6, 0.6, 1);
+}
+</style>
