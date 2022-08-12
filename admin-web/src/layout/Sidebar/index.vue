@@ -2,7 +2,7 @@
   <el-menu
     active-text-color="#ffd04b"
     background-color="#1B2640"
-    text-color="#fff"
+    text-color="#eee"
     :defaultActive="activePath"
     class="menu"
   >

@@ -6,6 +6,7 @@ const service = axios.create({
   axiosConfig: { "Content-Type": "application/json;charset=UTF-8" },
   // withCredentials: true, // send cookies when cross-domain requests
   timeout: 5000, // request timeout
+  headers: { "x-token": "sjssjsjjs" },
 })
 
 // response interceptor

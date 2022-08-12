@@ -1,6 +1,6 @@
 import { createRouter, createWebHistory } from "vue-router"
 import Layout from "@/layout"
-import ParentView from "@/components/ParentView"
+// import ParentView from "@/components/ParentView"
 // import { useLocalStorage } from "../hooks/useLocalStorage";
 // import { useUserStore } from '../store/userStore'
 import menuRouters from "./routes"
@@ -30,7 +30,7 @@ const router = createRouter({
           path: "/admin",
           name: "Admin",
           redirect: "/admin/home",
-          component: ParentView,
+          component: () => import(/* chunkName: P */ "@/components/ParentView"),
           children: menuRouters,
         },
       ],

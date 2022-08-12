@@ -1,6 +1,6 @@
 <template>
   <div class="foods">
-    <Card> <el-button @click="onQuery">请求数据GET</el-button></Card>
+    <Card> <el-button @click="onQuery">接口测试GET</el-button></Card>
     <Card style="margin-top: 16px">
       <el-form :model="form">
         <el-form-item label="您的名称：">
@@ -10,7 +10,9 @@
         <el-form-item label="您的年龄：">
           <el-input-number
             v-model="form.age"
-            placeholder="please input your age"
+            placeholder="please input"
+            :min="18"
+            :max="120"
           />
         </el-form-item>
 
@@ -22,7 +24,7 @@
         </el-form-item>
 
         <el-form-item>
-          <el-button type="primary" @click="onSubmit">接口测试</el-button>
+          <el-button type="primary" @click="onSubmit">接口测试POST</el-button>
         </el-form-item>
       </el-form>
     </Card>

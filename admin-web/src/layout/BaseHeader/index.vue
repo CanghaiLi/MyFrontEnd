@@ -1,5 +1,5 @@
 <script setup>
-const userName = "Admin"
+const userName = "系统管理员"
 </script>
 
 <template>
@@ -55,7 +55,8 @@ const userName = "Admin"
     color: #fff;
     cursor: pointer;
     &-icon {
-      margin-right: 4px;
+      font-size: 16px;
+      margin-right: 6px;
     }
   }
 }

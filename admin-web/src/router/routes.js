@@ -20,7 +20,7 @@ export default [
       {
         path: "foods",
         name: "FoodsList",
-        meta: { title: "套餐管理", icon: "Sell" },
+        meta: { title: "组合商品管理", icon: "Sell" },
         component: () => import(/* chunkName: Foods */ "@/views/Goods/Foods"),
       },
     ],
@@ -58,5 +58,11 @@ export default [
         component: () => import(/* chunkName: Upload */ "@/views/file/Upload"),
       },
     ],
+  },
+  {
+    path: "setting",
+    name: "Setting",
+    meta: { title: "设置", icon: "Setting" },
+    component: () => import(/* chunkName: Setting */ "@/views/AboutView"),
   },
 ]
