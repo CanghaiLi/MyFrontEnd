@@ -20,9 +20,9 @@
   opacity: 1;
 }
 .fade-enter-active {
-  transition: all 0.7s ease;
+  transition: all 0.5s ease;
 }
 .fade-leave-active {
-  transition: all 0.3s cubic-bezier(1, 0.6, 0.6, 1);
+  transition: all 0.2s cubic-bezier(1, 0.6, 0.6, 1);
 }
 </style>

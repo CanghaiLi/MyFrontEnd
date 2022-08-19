@@ -8,12 +8,7 @@
         </el-form-item>
 
         <el-form-item label="您的年龄：">
-          <el-input-number
-            v-model="form.age"
-            placeholder="please input"
-            :min="18"
-            :max="120"
-          />
+          <el-input-number v-model="form.age" :min="18" :max="120" />
         </el-form-item>
 
         <el-form-item label="您的性别：">
@@ -35,19 +30,9 @@
 import { reactive } from "vue"
 import Card from "@/components/Card"
 import { ElMessage } from "element-plus"
-import { query, submit } from "@/api/demo"
 const form = reactive({})
 
-const onQuery = () =>
-  query()
-    .then((res) => ElMessage.success("成功返回结果 ---> " + res.join("?")))
-    .catch(() => {})
+const onQuery = () => {}
 
-const onSubmit = () => {
-  submit(form)
-    .then((res) => {
-      ElMessage.success("成功返回结果 ---> " + JSON.stringify(res))
-    })
-    .catch(() => {})
-}
+const onSubmit = () => {}
 </script>

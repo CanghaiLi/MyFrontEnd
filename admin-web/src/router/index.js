@@ -16,11 +16,11 @@ const router = createRouter({
       name: "404",
       component: () => import(/* chunkName: 404 */ "@/components/NotFound"),
     },
-    // {
-    //   path: "/login",
-    //   name: "Login",
-    //   component: () => import(/* chunkName: login */ "src/view/login/login.vue"),
-    // },
+    {
+      path: "/login",
+      name: "Login",
+      component: () => import(/* chunkName: login */ "@/views/Login.vue"),
+    },
     {
       path: "/",
       name: "Layout",
