@@ -1,0 +1,138 @@
+.custom-nav {
+  position: relative;
+  height: 740rpx;
+}
+.select {
+  position: absolute;
+  background-color: #fff;
+  bottom: 0;
+  border-radius: 16rpx;
+  width: 694rpx;
+  left: 28rpx;
+  padding: 10rpx 0;
+  box-shadow: 20px 20px 30px 0 rgba(0,0,0,0.15);
+}
+.custom-nav .swiper {
+  height: 540rpx;
+}
+.swiper .swiper-item {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.wx-swiper-dots{position:relative;left: unset!important;right: 0;}
+.wx-swiper-dots.wx-swiper-dots-horizontal {
+  margin-bottom: 40rpx;
+}
+
+.location {
+  display: inline-flex;
+  align-items: center;
+  padding: 0 24rpx 0 12rpx;
+  height: 60rpx;
+  background-color: #fff;
+  border-radius: 30rpx;
+  /* margin-bottom: 16rpx; */
+  font-size: 30rpx;
+  font-family: PingFangSC-Semibold;
+}
+
+.location .icon {
+  width: 40rpx;
+  height: 36rpx;
+  /* margin-right: 16rpx; */
+}
+.select-m {
+  margin: 0 !important;
+  font-size: 30rpx;
+}
+.arr-r-loca {
+  width: 22rpx;
+  height: 22rpx;
+  margin-left: 8rpx;
+}
+
+.s-text {
+  margin-left: 20rpx;
+  font-family: PingFangSC-Semibold;
+}
+.arr-r {
+  position: absolute;
+  right: 20rpx;
+  top: 28rpx;
+  width: 24rpx;
+  height: 24rpx;
+}
+.prod {
+  box-shadow: 0 10px 30px 0 rgba(0,0,0,0.05);
+}
+.prod-r{
+  flex: 1;
+  position: relative;
+  height: 160rpx;
+}
+.prod-w .prod {
+  display: flex;
+}
+.prod-r .name {
+  font-size: 30rpx;
+  font-family: PingFangSC-Semibold;
+}
+.prod-r .desc {
+  margin-top: 2rpx;
+  font-size: 24rpx;
+  color: #666666;
+}
+.prod-r .price {
+  margin-top: 36rpx;
+  color: red;
+  font-size: 22rpx;
+}
+.prod-r .btn {
+  position: absolute;
+  right: 0;
+  bottom: 0rpx;
+  width: 160rpx;
+  height: 50rpx;
+  border-radius: 16rpx;
+  background-color: #ffcc00;
+  text-align: center;
+  font-size: 26rpx;
+  line-height: 50rpx;
+}
+.remain {
+  position: absolute;
+  right: 0;
+  bottom: 50rpx;
+  font-size: 22rpx;
+  width: 160rpx;
+  text-align: center;
+}
+.prod-img {
+  width: 160rpx;
+  height: 160rpx;
+  margin-right: 12rpx;
+  border-radius: 12rpx;
+}
+
+
+.bottom-tips {
+  position: fixed;
+  width: 100%;
+  height: 80rpx;
+  bottom: 0;
+  background-color: #FFFAE5;
+  text-align: center;
+  line-height: 80rpx;
+  font-size: 24rpx;
+  z-index: 10;
+}
+.iknow {
+  display: inline-block;
+  height: 52rpx;
+  background-color: #ffcc00;
+  border-radius: 12rpx;
+  padding: 0 16rpx;
+  margin-left: 16rpx;
+  line-height: 52rpx;
+}

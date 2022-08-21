@@ -1,0 +1,10 @@
+{
+  "navigationBarTitleText": "游船协会",
+  "usingComponents": {
+    "chart": "plugin://echarts/chart",
+    "van-progress": "@vant/weapp/progress/index",
+    "van-dropdown-menu": "@vant/weapp/dropdown-menu/index",
+    "van-dropdown-item": "@vant/weapp/dropdown-item/index",
+    "van-button": "@vant/weapp/button/index"
+  }
+}

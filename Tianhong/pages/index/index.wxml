@@ -1,0 +1,10 @@
+<chart chart-class="chart" option="{{ chartsInfo }}" height="500rpx"/>
+
+<van-progress percentage="50" show-pivot="{{false}}"/>
+
+<van-dropdown-menu>
+  <van-dropdown-item value="{{ value1 }}" options="{{ option1 }}" />
+  <van-dropdown-item value="{{ value2 }}" options="{{ option2 }}" />
+</van-dropdown-menu>
+
+<van-button type="primary" bindtap="onRequest">接口测试</van-button>
