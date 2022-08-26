@@ -1,0 +1,76 @@
+<view class="main">
+  <view class="time-w" bindtap="chooseStartTime">
+    <van-icon name="notes-o" size="16" custom-style="margin-right: 10rpx" />
+    <text class="time">2022-07-01</text>
+    -
+    <text class="time">2022-07-31</text>
+  </view>
+  <view class="total1">
+    <view class="amount">2223860.88</view>
+    <view class="desc">总交易额(元)</view>
+  </view>
+  <view class="total23">
+    <view class="row">
+      <view class="yuan"></view>
+      <view>支付宝(元)： </view>
+      <view class="amount">2123860.88</view>
+    </view>
+    <view class="row">
+      <view class="yuan"></view>
+      <view>微信(元)： </view>
+      <view class="amount">100000.00</view>
+    </view>
+  </view>
+</view>
+
+<view class="blocks">
+  <view class="block">
+    <view class="titlehead" style="margin-bottom: 48rpx;">苏宁连云港广场</view>
+    <view class="total">总交易额：<text class="amount">¥123123.00</text></view>
+    <van-progress percentage="60" color="#1373E6" />
+    <view class="items">
+      <view class="items-title">支付渠道明细:</view>
+      <van-grid column-num="2" direction="horizontal">
+        <van-grid-item icon="wechat" content-class="item">
+          <view slot="text" class="item-amount">¥83123.00</view>
+        </van-grid-item>
+        <van-grid-item icon="alipay" content-class="item">
+          <view slot="text" class="item-amount">¥40000.00</view>
+        </van-grid-item>
+      </van-grid>
+    </view>
+  </view>
+  <view class="block">
+    <view class="titlehead" style="margin-bottom: 48rpx;">苏宁宿州广场</view>
+    <view class="total">总交易额：<text class="amount">¥33123.00</text></view>
+    <van-progress percentage="25" color="#1373E6" />
+    <view class="items">
+      <view class="items-title">支付渠道明细:</view>
+      <van-grid column-num="2" direction="horizontal">
+        <van-grid-item icon="wechat" content-class="item">
+          <view slot="text" class="item-amount">¥15123.00</view>
+        </van-grid-item>
+        <van-grid-item icon="alipay" content-class="item">
+          <view slot="text" class="item-amount">¥18000.00</view>
+        </van-grid-item>
+      </van-grid>
+    </view>
+  </view>
+  <view class="block">
+    <view class="titlehead" style="margin-bottom: 48rpx;">苏宁福州广场</view>
+    <view class="total">总交易额：<text class="amount">¥23123.00</text></view>
+    <van-progress percentage="15" color="#1373E6" />
+    <view class="items">
+      <view class="items-title">支付渠道明细:</view>
+      <van-grid column-num="2" direction="horizontal">
+        <van-grid-item icon="wechat" content-class="item">
+          <view slot="text" class="item-amount">¥11123.00</view>
+        </van-grid-item>
+        <van-grid-item icon="alipay" content-class="item">
+          <view slot="text" class="item-amount">¥12000.00</view>
+        </van-grid-item>
+      </van-grid>
+    </view>
+  </view>
+</view>
+

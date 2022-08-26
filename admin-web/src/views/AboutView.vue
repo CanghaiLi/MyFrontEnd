@@ -8,12 +8,11 @@
       <el-table-column prop="title" label="任务名称" width="160" />
       <el-table-column prop="content" label="任务内容" show-overflow-tooltip />
       <el-table-column prop="startTime" label="开始时间" width="160" />
-
       <el-table-column prop="status" label="任务状态" width="96" />
-      <el-table-column label="操作" width="120">
+      <el-table-column label="操作" width="160">
         <template #default="{ row }">
-          <el-button link type="primary">编辑{{ row.index }}</el-button>
-          <el-button link type="primary">其他{{ row.index }}</el-button>
+          <el-button link type="primary">编辑{{ row.id }}</el-button>
+          <el-button link type="primary">其他{{ row.id }}</el-button>
         </template>
       </el-table-column>
     </el-table>
@@ -73,14 +72,12 @@ const handleCreateTask = async () => {
   await taskCreate(form)
   ElMessage.success("新增成功啦")
   isShow.value = false
+  getTasksInfo()
 }
 
 const onQuery = () =>
   test()
-    .then((res) => {
-      console.log(res)
-      ElMessage.success("成功返回结果 ---> " + res.result)
-    })
+    .then((res) => ElMessage.success("成功返回结果 ---> " + res))
     .catch(() => {})
 </script>
 

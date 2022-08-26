@@ -1,16 +1,13 @@
 {
-  "navigationBarTitleText": "综合信息",
+  "navigationBarTitleText": "历史流水",
   "navigationBarBackgroundColor": "#1373E6",
   "backgroundColorTop": "#1373E6",
   "navigationBarTextStyle": "white",
   "usingComponents": {
-    "chart": "plugin://echarts/chart",
-    "van-progress": "@vant/weapp/progress/index",
     "van-dropdown-menu": "@vant/weapp/dropdown-menu/index",
     "van-dropdown-item": "@vant/weapp/dropdown-item/index",
-    "van-button": "@vant/weapp/button/index",
-    "van-datetime-picker": "@vant/weapp/datetime-picker/index",
     "van-icon": "@vant/weapp/icon/index",
+    "van-swipe-cell": "@vant/weapp/swipe-cell/index",
     "van-divider": "@vant/weapp/divider/index"
   }
 }

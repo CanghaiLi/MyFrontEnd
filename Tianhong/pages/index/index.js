@@ -1,58 +1,88 @@
 // import * as ec from '../../echarts.min';
-const comp = requirePlugin('echarts');
-import request from "../../utils/request"
-// // 设置自行引入的 echarts 依赖库
-// comp.echarts = ec;
+const comp = requirePlugin("echarts");
+import request from "../../utils/request";
+
+// 设置自行引入的 echarts 依赖库
+const days = [];
+const ys = [];
+for (let i = 0; i < 30; i++) {
+  days.push("8/" + (i + 1));
+  ys.push((Math.random() * 10 + i + 1).toFixed(2));
+}
 
 Page({
-
   /**
    * 页面的初始数据
    */
   data: {
     chartsInfo: {
-      "series": [
+      tooltip: { trigger: "axis" },
+      grid: { x: 32, x2: 8, y: 16, y2: 24 },
+      series: [
         {
-          "data": [820, 932, 901, 934, 1290, 1330, 1320],
-          "type": "line"
-        }
+          data: ys,
+          type: "line",
+          itemStyle: {
+            normal: {
+              color: "#1373E6",
+              lineStyle: { color: "#1373E6" },
+            },
+          },
+          areaStyle: {
+            color: "#76aff5",
+          },
+        },
       ],
-      "xAxis": {
-        "data": ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
-        "type": "category"
+      xAxis: {
+        data: days,
+        type: "category",
+        boundaryGap: false,
       },
-      "yAxis": {
-        "type": "value"
-      }
+      yAxis: {
+        type: "value",
+        axisLabel: { formatter: "{value}w" },
+      },
     },
-    option1: [
-      { text: '全部商品', value: "0", icon: '' },
-      { text: '新款商品', value: "1", icon: '' },
-      { text: '活动商品', value: "2", icon: '' },
-    ],
-    option2: [
-      { text: '默认排序', value: 'a', icon: '' },
-      { text: '好评排序', value: 'b', icon: '' },
-      { text: '销量排序', value: 'c', icon: '' },
-    ],
-    value1: "0",
-    value2: 'a',
+
+    currentDate: new Date().getTime(),
+    minDate: new Date().getTime(),
+    formatter(type, value) {
+      if (type === "year") {
+        return `${value}年`;
+      }
+      if (type === "month") {
+        return `${value}月`;
+      }
+      return value;
+    },
+    // activeNames: ["1", "2", "3"]
+    
+  },
+  // onCollapseChange(event) {
+  //   this.setData({
+  //     activeNames: event.detail,
+  //   });
+  // },
+  onInput(event) {
+    this.setData({
+      currentDate: event.detail,
+    });
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    console.log('页面进入，echarts版本为', comp.echarts.version);
-    setTimeout(() => {
-      this.setData({
-        ["chartsInfo.series[0].data[0]"]:400
-      })
-    },2000)
+    console.log("页面进入，echarts版本为", comp.echarts.version);
+    // setTimeout(() => {
+    //   this.setData({
+    //     ["chartsInfo.series[0].data[0]"]:400
+    //   })
+    // },2000)
   },
   async onRequest() {
     try {
-      const res = await request("/api/pc/keys")
+      const res = await request("/api/pc/keys");
       console.log(res);
     } catch (error) {
       console.log(error);
@@ -61,49 +91,35 @@ Page({
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
-  onReady: function () {
-
-  },
+  onReady: function () {},
 
   /**
    * 生命周期函数--监听页面显示
    */
-  onShow: function () {
-
-  },
+  onShow: function () {},
 
   /**
    * 生命周期函数--监听页面隐藏
    */
-  onHide: function () {
-
-  },
+  onHide: function () {},
 
   /**
    * 生命周期函数--监听页面卸载
    */
-  onUnload: function () {
-
-  },
+  onUnload: function () {},
 
   /**
    * 页面相关事件处理函数--监听用户下拉动作
    */
-  onPullDownRefresh: function () {
-
-  },
+  onPullDownRefresh: function () {},
 
   /**
    * 页面上拉触底事件的处理函数
    */
-  onReachBottom: function () {
-
-  },
+  onReachBottom: function () {},
 
   /**
    * 用户点击右上角分享
    */
-  onShareAppMessage: function () {
-
-  }
-})
+  onShareAppMessage: function () {},
+});
